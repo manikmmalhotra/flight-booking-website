@@ -1,0 +1,302 @@
+svg {
+	width: 17% ;
+	height: auto;
+	z-index: 11;
+    position: absolute;
+
+}
+
+		  /*
+ * By Jose Aguinaga
+ * http://jjperezaguinaga.com
+ */
+@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+body {
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #f2efd9 100%);
+}
+@-webkit-keyframes rotate-right {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-left {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@-webkit-keyframes hover {
+  0% {
+    -webkit-transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(5%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  }
+}
+@-webkit-keyframes pull {
+  0% {
+    -webkit-transform: scaleY(1);
+  }
+  40% {
+    -webkit-transform: scaleY(1.01);
+  }
+  60% {
+    -webkit-transform: scaleY(0.99);
+  }
+  80% {
+    -webkit-transform: scaleY(1.01);
+  }
+  100% {
+    -webkit-transform: scaleY(0.99);
+  }
+  80% {
+    -webkit-transform: scaleY(1.01);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+  }
+}
+#airplane2, #airplane1 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 200px 200px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-right 60s linear 0s infinite;
+}
+#countryObjects {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 200px 200px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-right 240s linear 0s infinite;
+}
+#floatingGlobe {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 200px 200px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-left 360s linear 0s infinite;
+}
+#globe {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: hover 0s linear 0s infinite;
+}
+#windmill {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 331px 201px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-right 2s linear 0s infinite;
+}
+#cloud1 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: hover 3s linear 1s infinite;
+}
+#cloud2 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: hover 3s linear 2s infinite;
+}
+#cloud3 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: hover 3s linear 3s infinite;
+}
+#circle1 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 200px 200px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+#circle2 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 200px 200px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-left 24s linear 0s infinite;
+}
+#circle3 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 200px 200px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+#circle4 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 200px 200px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-left 24s linear 0s infinite;
+}
+#circle5 {
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transform-origin: 200px 200px;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+    font-size: 18px;
+  }
+  body{
+        font-family: 'Franklin Gothic Medium', 'Helvetica', 'Arial', 'sans-serif';
+  }
+  form{
+    width: 920px;
+    margin: 50px;
+    padding: 50px 20px;
+    background: linear-gradient(to right, rgb(20, 183, 233) 5%,#3fbdc2 95%);
+    z-index: 11;
+    position: fixed;
+    left: 230px;
+  }
+  fieldset{
+    border: none;
+  }
+  .radio-group label{
+    padding-right: 90px;
+  }
+  .from-place, .to-place, .airline-name{
+    width: 90%;
+    height: 36px;
+    padding: 2px 8px;
+    border: 1px solid #351919;
+    outline: none;
+  }
+  .group-field label{
+    display: block;
+    padding: 10px 0;
+  }
+  fieldset div{
+    display: inline-block;
+    padding: 10px 0px;
+    float: left;
+  }    
+  .group-field{
+      width: 420px;
+      height: auto;
+  }
+  .group-select-field{
+    width: 210px;
+    height: auto;
+  }
+  .group-select-field label{
+    display: block;
+    padding: 5px 0px;
+  }
+  .ticket-count {
+      width: 120px;
+  }
+  .search-btn{
+    float: right;
+    padding: 10px 22px;
+    border-radius: 6px;
+    outline: none;
+    font-weight: bold;
+    background: #ff7600;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  .place-swap-btn{
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+  }
+  .more-link{
+    color: #203b7e;
+    outline: none;
+    cursor: pointer;
+  }
+  select{
+    border: 1px solid #dcdcdc;
+    background: rgb(175, 235, 253);
+    outline: none;
+  }
+  .bold-type{
+    font-weight: bold;
+  }
+  ::placeholder{
+    color: #1a0e0e;
+  }
+  .label-hint{
+    color: #301717;
+  }
+  
+  input[type="date"] {
+    background:rgb(167, 226, 221) url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  95% 50% no-repeat ;
+    height: 36px;
+    border: 1px solid #161111;
+    outline: none;
+  }
+  input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  .more-option{
+    border-bottom: 1px dotted #dcdcdc;
+    padding-bottom: 20px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  html, body, .container{
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    min-height: 500px;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 9;
+  }
+  .container{
+    background-color: #007ced;
+      background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);
+  }
+  #cloud-intro{
+    position: relative;
+    height: 100%;
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+                url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+                url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+      animation: wind 20s linear infinite;
+  }
+  @keyframes wind{
+    0% {
+      background-position: 0 200px, 0 300px, 100px 250px;
+    }
+    100% {
+      background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+    }
+  
+  }
+
+
+
+
+
+
+
+  
+

@@ -1,0 +1,404 @@
+/* generic */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+h1 {
+    font-family:'Questrial', Verdana, sans-serif;
+    text-align:center;
+    font-size:40px;
+    padding:0;
+    margin:0 0 20px 0;
+    position:relative;
+    color:rgb(17, 11, 11);
+}
+/** have a nice ampersand **/
+ h1:after {
+    font-size:25px;
+    color:rgb(202, 103, 46);
+    content:'&';
+    text-align:center;
+    display:block;
+    width:100%;
+    font-family:'Alice', Verdana, serif;
+    text-shadow: 0px 1px 0px #fff;
+}
+/** create the gradient bottom **/
+ h1:before {
+    position:fixed;
+    bottom:15px;
+    content:' ';
+    text-align:center;
+    display:block;
+    height:2px;
+    width:100%;
+    /* IE10+ */
+    background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(182, 180, 180, 0.7) 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, rgba(182, 180, 180, 0.7) 58%, rgba(238, 237, 237, 0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* W3C */
+    top: 0px;
+}
+/* Here comes to good stuff : content styling */
+ #content {
+    position: absolute;
+    width:700px;
+    min-height:200px;
+    z-index:11;
+    padding:30px;
+    border:1px solid #383838;
+    /* My stipped background */
+    /* FF3.6+ */
+    background: repeating-linear-gradient(-45deg, #EFC1CB, #EFC1CB 30px, #F2F2F2 30px, #F2F2F2 40px, #C2E8F5 40px, #C2E8F5 70px, #F2F2F2 70px, #F2F2F2 80px);
+    border-radius:8px;
+    /*box-shadow*/
+    box-shadow:0px 1px 6px #3F3F3F;
+    top: 10px;
+    left: 350px;
+}
+/** my "fake" background that will hover the stripes **/
+ #content:after {
+    background:rgb(118, 201, 240);
+    margin:10px;
+    position: absolute;
+    content :" ";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border:1px #E5E5E5 solid;
+    /*border-radius*/
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+}
+/*** form styling **/
+
+/** we remove the red glow around required fields since we are already using the red star */
+ input:required, textarea:required {
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    -o-box-shadow:none;
+    box-shadow:none;
+}
+/** inputs and textarea**/
+ input:not([type="submit"]), textarea {
+    outline:none;
+    display:block;
+    width:380px;
+    padding:4px 8px;
+    border:1px dashed #DBDBDB;
+    color:rgb(14, 5, 5);
+    font-family:'Droid Sans', Tahoma, Arial, Verdana sans-serif;
+    font-size:14px;
+    /*border-radius*/
+    -webkit-border-radius:2px;
+    -moz-border-radius:2px;
+    border-radius:2px;
+    /*transition*/
+    transition: background 0.2s linear, box-shadow 0.6s linear;
+}
+input:not([type="submit"]):active, textarea:active, input:not([type="submit"]):focus, textarea:focus {
+    background:#F7F7F7;
+    border:dashed 1px #969696;
+    /*box-shadow*/
+    -webkit-box-shadow:2px 2px 7px #E8E8E8 inset;
+    -moz-box-shadow:2px 2px 7px #E8E8E8 inset;
+    box-shadow:2px 2px 7px #E8E8E8 inset;
+}
+input:not([type="submit"]) {
+    height: 20px;
+}
+/* placeholder */
+ ::-webkit-input-placeholder {
+    color:#BABABA;
+    font-style:italic;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color:#BABABA;
+    font-style:italic;
+}
+textarea {
+    min-height:150px;
+    resize:vertical
+}
+/** labels**/
+
+/** adding our icon font !! */
+ .iconic:before {
+    font-size:25px;
+    font-family:'Alice', Verdana, serif;
+}
+.iconic.link:before {
+    content:'/';
+}
+.iconic.quote-alt:before {
+    content:"'";
+}
+.iconic.comment:before {
+    content:"q";
+}
+.iconic.user:before {
+    content:"u";
+}
+.iconic.mail-alt:before {
+    content:"M";
+}
+label {
+    color:rgb(14, 8, 8);
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    transition: color 1s ease;
+}
+label:hover {
+    color:#000000;
+}
+label:before {
+    color:#C1BFBD;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    transition: color 1s ease;
+}
+label:hover:before {
+    color:#0a0707;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    transition: color 1s ease;
+}
+p {
+    margin-bottom:20px;
+}
+.indication {
+    color:#070505;
+    font-size:12px;
+    font-style:italic;
+    text-align:right;
+    padding-right:10px;
+}
+.required {
+    color:#E5224C;
+}
+/** Styling the send button **/
+ input[type=submit] {
+    margin-left:235px;
+    cursor:pointer;
+    background:none;
+    border:none;
+    font-family:'Alice', serif;
+    color:#1f1717;
+    font-size:18px;
+    padding:10px 4px;
+    border:1px solid #E0E0E0;
+    text-shadow: 0px 1px 1px #E8E8E8;
+    background: linear-gradient(top, rgba(247, 247, 247, 1) 1%, rgba(242, 242, 242, 1) 100%);
+    /*border-radius*/
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    /*box-shadow*/
+    -webkit-box-shadow:0px 1px 1px #FFF inset, 0 0 0px 5px #EAEAEA;
+    -moz-box-shadow:0px 1px 1px #FFF inset, 0 0 0px 5px #EAEAEA;
+    box-shadow:0px 1px 1px #FFF inset, 0 0 0px 5px #EAEAEA;
+    /*transition*/
+    -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    -o-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+}
+input[type=submit]:hover {
+    color:#0f0c0c;
+    border-color: #CECECE;
+    background: linear-gradient(top, rgba(244, 244, 244, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    /*box-shadow*/
+    -webkit-box-shadow:0px 1px 1px #FFF inset, 0 0 0px 5px #E0E0E0;
+    -moz-box-shadow:0px 1px 1px #FFF inset, 0 0 0px 5px #E0E0E0;
+    box-shadow:0px 1px 1px #FFF inset, 0 0 0px 5px #E0E0E0;
+}
+input[type=submit]:active, input[type=submit]:focus {
+    position:relative;
+    top:1px;
+    color:#0f0b0b;
+    background: linear-gradient(top, rgba(234, 234, 234, 1) 0%, rgba(242, 242, 242, 1) 100%);
+    /*box-shadow*/
+    -webkit-box-shadow:0px -1px 1px #FFF inset, 0 0 0px 5px #E0E0E0;
+    -moz-box-shadow:0px -1px 1px #FFF inset, 0 0 0px 5px #E0E0E0;
+    box-shadow:0px -1px 1px #FFF inset, 0 0 0px 5px #E0E0E0;
+}
+
+
+
+
+
+svg {
+	width: 17% ;
+	height: auto;
+	z-index: 11;
+    position: absolute;
+
+}
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One);
+body {
+ background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #f2efd9 100%);
+}
+@-webkit-keyframes rotate-right {
+ from {
+   -webkit-transform: rotate(0deg);
+ }
+ to {
+   -webkit-transform: rotate(360deg);
+ }
+}
+@-webkit-keyframes rotate-left {
+ from {
+   -webkit-transform: rotate(0deg);
+ }
+ to {
+   -webkit-transform: rotate(-360deg);
+ }
+}
+@-webkit-keyframes hover {
+ 0% {
+   -webkit-transform: translateY(0%);
+ }
+ 50% {
+   -webkit-transform: translateY(5%);
+ }
+ 100% {
+   -webkit-transform: translateY(0%);
+ }
+}
+@-webkit-keyframes pull {
+ 0% {
+   -webkit-transform: scaleY(1);
+ }
+ 40% {
+   -webkit-transform: scaleY(1.01);
+ }
+ 60% {
+   -webkit-transform: scaleY(0.99);
+ }
+ 80% {
+   -webkit-transform: scaleY(1.01);
+ }
+ 100% {
+   -webkit-transform: scaleY(0.99);
+ }
+ 80% {
+   -webkit-transform: scaleY(1.01);
+ }
+ 100% {
+   -webkit-transform: scaleY(1);
+ }
+}
+#airplane2, #airplane1 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 200px 200px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-right 60s linear 0s infinite;
+}
+#countryObjects {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 200px 200px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-right 240s linear 0s infinite;
+}
+#floatingGlobe {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 200px 200px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-left 360s linear 0s infinite;
+}
+#globe {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: hover 0s linear 0s infinite;
+}
+#windmill {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 331px 201px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-right 2s linear 0s infinite;
+}
+#cloud1 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: hover 3s linear 1s infinite;
+}
+#cloud2 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: hover 3s linear 2s infinite;
+}
+#cloud3 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: hover 3s linear 3s infinite;
+}
+#circle1 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 200px 200px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+#circle2 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 200px 200px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-left 24s linear 0s infinite;
+}
+#circle3 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 200px 200px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+#circle4 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 200px 200px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-left 24s linear 0s infinite;
+}
+#circle5 {
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-transform-origin: 200px 200px;
+ -webkit-transform: translate3d(0, 0, 0);
+ -webkit-animation: rotate-right 12s linear 0s infinite;
+}
+
+
+
+
+
+html, body, .container{
+    width: 100%;
+    height: 100%;
+    min-width: 500px;
+    min-height: 500px;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    z-index: 9;
+  }
+  .container{
+    background-color: #da9234;
+      background: linear-gradient(to bottom, #da7735 1%,#cce7ff 100%);
+  }
+  #cloud-intro{
+    position: relative;
+    height: 100%;
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+    background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+                url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+                url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+      animation: wind 20s linear infinite;
+  }
+  @keyframes wind{
+    0% {
+      background-position: 0 200px, 0 300px, 100px 250px;
+    }
+    100% {
+      background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+    }
+  
+  }
+
